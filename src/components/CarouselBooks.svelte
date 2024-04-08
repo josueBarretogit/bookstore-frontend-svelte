@@ -1,52 +1,88 @@
 <script lang="ts">
- import { Carousel } from 'flowbite-svelte';
-	import Slide from 'flowbite-svelte/Slide.svelte';
+  import { Carousel , Thumbnails, Card} from 'flowbite-svelte';
+  import Slide from 'flowbite-svelte/Slide.svelte';
+
+  export let genreTitle : string
+
   export const images = [
     {
-      alt: 'Cosmic timetraveler',
-      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
-      title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com',
-     mess : "aa"
+      src: 'https://images-us.bookshop.org/ingram/9780307387899.jpg?height=250&v=v2-d1fff228d4711929355d4f6c0f8fb8c4',
+      mess : "aasdkjasa"
     },
-    
+
     {
-      alt: 'Cosmic timetraveler',
       src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
-      title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com',
-     mess : "b"
+      mess : "askjdaskdja"
     },
-    {
-      alt: 'Cosmic timetraveler',
+
+{
       src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
-      title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com',
-     mess : "4"
+      mess : "aa"
     },
-    {
-      alt: 'Cosmic timetraveler',
+
+{
       src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
-      title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com',
-     mess : "aa"
+      mess : "aa"
     },
-    {
-      alt: 'Cosmic timetraveler',
+
+{
       src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
-      title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com',
-     mess : "aa"
+      mess : "aa"
     },
-    
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+{
+      src: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+      mess : "aa"
+    },
+
+
+
+
   ];
 
+
+  let index = 0;
+  let forward = true; 
+  let inactiveClass = "bg-black" 
 </script>
 
 
-<div class="max-w-4xl mb-5">
-  <Carousel {images}  let:Controls >
-    <div slot="slide" let:index >
-      <h2>{images[index].mess}</h2>
-      <Slide  image={images[index]}/>
 
-    </div>
-    <Controls />
-  </Carousel>
+<div class="">
 
+  <h2>{genreTitle}</h2>
+  <div  class="overflow-x-scroll flex " >
+      {#each images as image }
+        <img src={image.src} class="inline m-1 "  style="width: 200px; height: 300px;">
+        
+      {/each}
+  </div>
 </div>
