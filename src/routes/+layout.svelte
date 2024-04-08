@@ -41,3 +41,6 @@
 
 
 <slot />
+
+
+<footer>a footer </footer>
