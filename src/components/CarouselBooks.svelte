@@ -17,7 +17,7 @@
 <h2 class="text-3xl">{genreTitle}</h2>
 
 {#if validateGetBooksByGenre(booksByGenre)}
-  <a href="/"  class="block flex justify-end w-full">
+  <a href="/"  class=" flex justify-end w-full ">
 
     <h3 class="mr-2" >View all: {booksByGenre.totalBooks} </h3>
 
@@ -27,7 +27,7 @@
     {#each  booksByGenre.books as book }
 
 
-      <div  class="inline-block m-2   grow" >
+      <div  class="inline-block grow" >
 
         <a href="/">
           <img src={book.coverPhotoUrl} class="inline m-1" alt="expected a img"  >
